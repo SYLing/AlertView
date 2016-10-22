@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nVd-sW-Acc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="jIk-3H-vAP">
+            <objects>
+                <viewController id="nVd-sW-Acc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9Wf-j1-4B7"/>
+                        <viewControllerLayoutGuide type="bottom" id="BEr-V0-KYO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FCz-VP-lgN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4uB-O0-eXq">
+                                <color key="backgroundColor" red="1" green="0.42352941179999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="ConfirmAlert"/>
+                                <connections>
+                                    <action selector="ConfirmAlert:" destination="nVd-sW-Acc" eventType="touchUpInside" id="KkZ-Ld-ubg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4Q-Kp-9Qr">
+                                <color key="backgroundColor" red="1" green="0.85999594189999995" blue="0.86152014020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="CancelAndConfirmAlert"/>
+                                <connections>
+                                    <action selector="CancelAndConfirmAlert:" destination="nVd-sW-Acc" eventType="touchUpInside" id="5NP-Nv-TMF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lDr-AH-LEc">
+                                <color key="backgroundColor" red="1" green="0.81973014759999996" blue="0.32362098449999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="SimpleAlert"/>
+                                <connections>
+                                    <action selector="SimpleAlert:" destination="nVd-sW-Acc" eventType="touchUpInside" id="CI1-2G-wPk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="F4Q-Kp-9Qr" firstAttribute="top" secondItem="4uB-O0-eXq" secondAttribute="bottom" constant="30" id="5X4-ia-MLn"/>
+                            <constraint firstItem="4uB-O0-eXq" firstAttribute="centerY" secondItem="FCz-VP-lgN" secondAttribute="centerY" id="Kg5-Mm-H5i"/>
+                            <constraint firstItem="4uB-O0-eXq" firstAttribute="centerX" secondItem="lDr-AH-LEc" secondAttribute="centerX" id="Mba-DS-Ok3"/>
+                            <constraint firstItem="F4Q-Kp-9Qr" firstAttribute="centerX" secondItem="lDr-AH-LEc" secondAttribute="centerX" id="NN5-WQ-mER"/>
+                            <constraint firstItem="4uB-O0-eXq" firstAttribute="top" secondItem="lDr-AH-LEc" secondAttribute="bottom" constant="30" id="hpI-nN-EG5"/>
+                            <constraint firstItem="4uB-O0-eXq" firstAttribute="centerX" secondItem="FCz-VP-lgN" secondAttribute="centerX" id="yky-xK-T1D"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J3q-Jl-RT7" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
