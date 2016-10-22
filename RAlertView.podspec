@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
 
   s.name         = "RAlertView"
-  s.version      = "0.0.1"
-  s.summary      = "A short description of RAlertView."
+  s.version      = "0.0.2"
+  s.summary      = "custom of AlertView."
 
   s.ios.deployment_target = "7.0"
 
