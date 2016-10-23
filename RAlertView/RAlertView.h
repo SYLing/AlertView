@@ -7,8 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "HexColors.h"
-#import "Masonry.h"
 
 typedef NS_ENUM(NSInteger,AlertStyle) {
     SimpleAlert = 0,

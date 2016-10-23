@@ -7,6 +7,8 @@
 //
 
 #import "RAlertView.h"
+#import "HexColors.h"
+#import "Masonry.h"
 
 @interface RAlertView ()
 @property(nonatomic,strong)UILabel *headerTitleLabel;
