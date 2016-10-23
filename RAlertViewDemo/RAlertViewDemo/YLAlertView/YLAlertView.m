@@ -96,7 +96,9 @@
 -(void)animateSenior{
 
     self.mainView.transform = CGAffineTransformMakeTranslation(0, 600);
-    [UIView animateWithDuration:1 delay:0 usingSpringWithDamping:0.35 initialSpringVelocity:0.5 options:UIViewAnimationOptionCurveLinear animations:^{
+    // Damping:弹性系数，越小，弹簧效果越明显
+    // SpringVelocity:弹簧初始化速度
+    [UIView animateWithDuration:0.2 delay:0 usingSpringWithDamping:1 initialSpringVelocity:1 options:UIViewAnimationOptionCurveLinear animations:^{
         self.mainView.transform = CGAffineTransformMakeTranslation(0, 0);
     } completion:^(BOOL finished) {
     }];
