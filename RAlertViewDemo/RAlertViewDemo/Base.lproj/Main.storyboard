@@ -39,14 +39,24 @@
                                     <action selector="SimpleAlert:" destination="nVd-sW-Acc" eventType="touchUpInside" id="CI1-2G-wPk"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NY2-dA-Ilw">
+                                <state key="normal" title="我自己的"/>
+                                <connections>
+                                    <action selector="myButton:" destination="nVd-sW-Acc" eventType="touchUpInside" id="Nhc-mo-8eF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="F4Q-Kp-9Qr" firstAttribute="centerX" secondItem="lDr-AH-LEc" secondAttribute="centerX" id="2bN-nD-Mhg"/>
                             <constraint firstItem="F4Q-Kp-9Qr" firstAttribute="top" secondItem="4uB-O0-eXq" secondAttribute="bottom" constant="30" id="5X4-ia-MLn"/>
+                            <constraint firstItem="4uB-O0-eXq" firstAttribute="centerX" secondItem="lDr-AH-LEc" secondAttribute="centerX" id="61I-GN-EHa"/>
+                            <constraint firstItem="NY2-dA-Ilw" firstAttribute="centerX" secondItem="lDr-AH-LEc" secondAttribute="centerX" id="DE0-F0-yQo"/>
                             <constraint firstItem="4uB-O0-eXq" firstAttribute="centerY" secondItem="FCz-VP-lgN" secondAttribute="centerY" id="Kg5-Mm-H5i"/>
                             <constraint firstItem="4uB-O0-eXq" firstAttribute="centerX" secondItem="lDr-AH-LEc" secondAttribute="centerX" id="Mba-DS-Ok3"/>
                             <constraint firstItem="F4Q-Kp-9Qr" firstAttribute="centerX" secondItem="lDr-AH-LEc" secondAttribute="centerX" id="NN5-WQ-mER"/>
                             <constraint firstItem="4uB-O0-eXq" firstAttribute="top" secondItem="lDr-AH-LEc" secondAttribute="bottom" constant="30" id="hpI-nN-EG5"/>
+                            <constraint firstItem="NY2-dA-Ilw" firstAttribute="top" secondItem="F4Q-Kp-9Qr" secondAttribute="bottom" constant="20" id="wDz-Y1-UXD"/>
                             <constraint firstItem="4uB-O0-eXq" firstAttribute="centerX" secondItem="FCz-VP-lgN" secondAttribute="centerX" id="yky-xK-T1D"/>
                         </constraints>
                     </view>

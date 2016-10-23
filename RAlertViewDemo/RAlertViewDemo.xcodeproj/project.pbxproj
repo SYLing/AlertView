@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		318A770D1DBC92120049453F /* closed.png in Resources */ = {isa = PBXBuildFile; fileRef = 318A77081DBC92120049453F /* closed.png */; };
+		318A770E1DBC92120049453F /* closed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 318A77091DBC92120049453F /* closed@2x.png */; };
+		318A770F1DBC92120049453F /* closed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 318A770A1DBC92120049453F /* closed@3x.png */; };
+		318A77101DBC92120049453F /* YLAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 318A770C1DBC92120049453F /* YLAlertView.m */; };
 		6DDD2C20D140B6FD871AD44F /* libPods-RAlertViewDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AA33BB1DE14E5959A24004 /* libPods-RAlertViewDemo.a */; };
 		E5AB18251DBAEDDD0010FAA9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E5AB18241DBAEDDD0010FAA9 /* main.m */; };
 		E5AB18281DBAEDDD0010FAA9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5AB18271DBAEDDD0010FAA9 /* AppDelegate.m */; };
@@ -16,10 +20,6 @@
 		E5AB18331DBAEDDD0010FAA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5AB18311DBAEDDD0010FAA9 /* LaunchScreen.storyboard */; };
 		E5AB183E1DBAEDDD0010FAA9 /* RAlertViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E5AB183D1DBAEDDD0010FAA9 /* RAlertViewDemoTests.m */; };
 		E5AB18491DBAEDDD0010FAA9 /* RAlertViewDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E5AB18481DBAEDDD0010FAA9 /* RAlertViewDemoUITests.m */; };
-		E5AB185C1DBAEDF50010FAA9 /* closed.png in Resources */ = {isa = PBXBuildFile; fileRef = E5AB18571DBAEDF50010FAA9 /* closed.png */; };
-		E5AB185D1DBAEDF50010FAA9 /* closed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5AB18581DBAEDF50010FAA9 /* closed@2x.png */; };
-		E5AB185E1DBAEDF50010FAA9 /* closed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5AB18591DBAEDF50010FAA9 /* closed@3x.png */; };
-		E5AB185F1DBAEDF50010FAA9 /* RAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5AB185B1DBAEDF50010FAA9 /* RAlertView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		318A77081DBC92120049453F /* closed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = closed.png; sourceTree = "<group>"; };
+		318A77091DBC92120049453F /* closed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "closed@2x.png"; sourceTree = "<group>"; };
+		318A770A1DBC92120049453F /* closed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "closed@3x.png"; sourceTree = "<group>"; };
+		318A770B1DBC92120049453F /* YLAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLAlertView.h; sourceTree = "<group>"; };
+		318A770C1DBC92120049453F /* YLAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLAlertView.m; sourceTree = "<group>"; };
 		7AF2B5D6B206A0EE93ADD018 /* Pods-RAlertViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RAlertViewDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-RAlertViewDemo/Pods-RAlertViewDemo.release.xcconfig"; sourceTree = "<group>"; };
 		CB03295CDD7123B8AC3FEBC6 /* Pods-RAlertViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RAlertViewDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RAlertViewDemo/Pods-RAlertViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		D2AA33BB1DE14E5959A24004 /* libPods-RAlertViewDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RAlertViewDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,11 +64,6 @@
 		E5AB18441DBAEDDD0010FAA9 /* RAlertViewDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RAlertViewDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5AB18481DBAEDDD0010FAA9 /* RAlertViewDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RAlertViewDemoUITests.m; sourceTree = "<group>"; };
 		E5AB184A1DBAEDDD0010FAA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E5AB18571DBAEDF50010FAA9 /* closed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = closed.png; sourceTree = "<group>"; };
-		E5AB18581DBAEDF50010FAA9 /* closed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "closed@2x.png"; sourceTree = "<group>"; };
-		E5AB18591DBAEDF50010FAA9 /* closed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "closed@3x.png"; sourceTree = "<group>"; };
-		E5AB185A1DBAEDF50010FAA9 /* RAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAlertView.h; sourceTree = "<group>"; };
-		E5AB185B1DBAEDF50010FAA9 /* RAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAlertView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +100,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		318A77071DBC92120049453F /* YLAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				318A77081DBC92120049453F /* closed.png */,
+				318A77091DBC92120049453F /* closed@2x.png */,
+				318A770A1DBC92120049453F /* closed@3x.png */,
+				318A770B1DBC92120049453F /* YLAlertView.h */,
+				318A770C1DBC92120049453F /* YLAlertView.m */,
+			);
+			path = YLAlertView;
+			sourceTree = "<group>";
+		};
 		8FE3CACFF5B8DD89AE086259 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,7 +146,7 @@
 		E5AB18221DBAEDDD0010FAA9 /* RAlertViewDemo */ = {
 			isa = PBXGroup;
 			children = (
-				E5AB18561DBAEDF50010FAA9 /* RAlertView */,
+				318A77071DBC92120049453F /* YLAlertView */,
 				E5AB18261DBAEDDD0010FAA9 /* AppDelegate.h */,
 				E5AB18271DBAEDDD0010FAA9 /* AppDelegate.m */,
 				E5AB18291DBAEDDD0010FAA9 /* ViewController.h */,
@@ -172,18 +184,6 @@
 				E5AB184A1DBAEDDD0010FAA9 /* Info.plist */,
 			);
 			path = RAlertViewDemoUITests;
-			sourceTree = "<group>";
-		};
-		E5AB18561DBAEDF50010FAA9 /* RAlertView */ = {
-			isa = PBXGroup;
-			children = (
-				E5AB18571DBAEDF50010FAA9 /* closed.png */,
-				E5AB18581DBAEDF50010FAA9 /* closed@2x.png */,
-				E5AB18591DBAEDF50010FAA9 /* closed@3x.png */,
-				E5AB185A1DBAEDF50010FAA9 /* RAlertView.h */,
-				E5AB185B1DBAEDF50010FAA9 /* RAlertView.m */,
-			);
-			path = RAlertView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,9 +299,9 @@
 				E5AB18331DBAEDDD0010FAA9 /* LaunchScreen.storyboard in Resources */,
 				E5AB18301DBAEDDD0010FAA9 /* Assets.xcassets in Resources */,
 				E5AB182E1DBAEDDD0010FAA9 /* Main.storyboard in Resources */,
-				E5AB185E1DBAEDF50010FAA9 /* closed@3x.png in Resources */,
-				E5AB185C1DBAEDF50010FAA9 /* closed.png in Resources */,
-				E5AB185D1DBAEDF50010FAA9 /* closed@2x.png in Resources */,
+				318A770F1DBC92120049453F /* closed@3x.png in Resources */,
+				318A770D1DBC92120049453F /* closed.png in Resources */,
+				318A770E1DBC92120049453F /* closed@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,7 +374,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5AB185F1DBAEDF50010FAA9 /* RAlertView.m in Sources */,
+				318A77101DBC92120049453F /* YLAlertView.m in Sources */,
 				E5AB182B1DBAEDDD0010FAA9 /* ViewController.m in Sources */,
 				E5AB18281DBAEDDD0010FAA9 /* AppDelegate.m in Sources */,
 				E5AB18251DBAEDDD0010FAA9 /* main.m in Sources */,

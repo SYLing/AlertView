@@ -1,37 +1,51 @@
 //
-//  RAlertView.m
-//  RAlert
+//  YLAlertView.m
+//  YLAlert
 //
 //  Created by 邵银岭 on 2016/10/11.
 //  Copyright © 2016年 邵银岭. All rights reserved.
 //
 
-#import "RAlertView.h"
+#import "YLAlertView.h"
 #import "HexColors.h"
 #import "Masonry.h"
 
-@interface RAlertView ()
+@interface YLAlertView ()
 @property(nonatomic,strong)UILabel *headerTitleLabel;
 @property(nonatomic,strong)UILabel *contentTextLabel;
 @property(nonatomic,strong)UIButton *closedButton;
 @property(nonatomic,strong)UIButton *confirmButton;
 @property(nonatomic,strong)UIButton *cancelButton;
 @property(nonatomic,strong)UIView *mainView;
-@end
-@implementation RAlertView
 
-- (instancetype)initWithStyle:(AlertStyle)style {
+/**
+ 确认按钮回调
+ */
+@property (nonatomic, copy) void(^confirmButtonBlock)();
+/**
+ 返回按钮回调
+ */
+@property (nonatomic, copy) void(^cancelButtonBlock)();
+@end
+
+@implementation YLAlertView
+
+- (instancetype)initWithTitle:(NSString *)title message:(NSString *)message preferredStyle:(YLAlertStyle)preferredStyle {
     self = [super init];
     if (self) {
-        [self initWindow:style];
+        [self initWindow:preferredStyle];
+        [self.headerTitleLabel setText:title];
+        [self.contentTextLabel setText:message];
     }
     return self;
 }
 
-- (instancetype)initWithStyle:(AlertStyle)style width:(CGFloat)width{
+- (instancetype)initWithTitle:(NSString *)title message:(NSString *)message preferredStyle:(YLAlertStyle)preferredStyle width:(CGFloat)width{
     self = [super init];
     if (self) {
-        [self initWindow:style];
+        [self initWindow:preferredStyle];
+        [self.headerTitleLabel setText:title];
+        [self.contentTextLabel setText:message];
         [self setAlertWidth:width];
     }
     return self;
@@ -52,26 +66,26 @@
     }];
 }
 
--(void)setTheme:(AlertTheme)theme{
+-(void)setTheme:(YLAlertTheme)theme{
     
     switch (theme) {
-        case YellowAlert://#fddb43
+        case YLYellowAlert://#fddb43
             [_confirmButton setBackgroundColor:[UIColor hx_colorWithHexRGBAString:@"#fddb43"]];
             [_confirmButton setTitleColor:[UIColor hx_colorWithHexRGBAString:@"#3d3d3d"] forState:UIControlStateNormal];
             break;
-        case GreenAlert://#4CBE77
+        case YLGreenAlert://#4CBE77
             [_confirmButton setBackgroundColor:[UIColor hx_colorWithHexRGBAString:@"#4CBE77"]];
             [_confirmButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
             break;
-        case BlueAlert://#295DC0
+        case YLBlueAlert://#295DC0
             [_confirmButton setBackgroundColor:[UIColor hx_colorWithHexRGBAString:@"#295DC0"]];
             [_confirmButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
             break;
-        case Purple1Alert://#74225C
+        case YLPurple1Alert://#74225C
             [_confirmButton setBackgroundColor:[UIColor hx_colorWithHexRGBAString:@"#74225C"]];
             [_confirmButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
             break;
-        case Purple2Alert://#B655FF
+        case YLPurple2Alert://#B655FF
             [_confirmButton setBackgroundColor:[UIColor hx_colorWithHexRGBAString:@"#B655FF"]];
             [_confirmButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
             
@@ -79,37 +93,30 @@
     }
 }
 
--(void)setHeaderTitle:(NSString *)headerTitle{
-    [self.headerTitleLabel setText:headerTitle];
-}
--(void)setContentText:(NSString *)contentText{
-    NSMutableAttributedString * attributedString = [[NSMutableAttributedString alloc] initWithString:contentText];
-    NSMutableParagraphStyle * paragraphStyle = [[NSMutableParagraphStyle alloc] init];
-    [paragraphStyle setLineSpacing:5];
-    [attributedString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, [contentText length])];
-    [self.contentTextLabel setAttributedText:attributedString];
-}
--(void)setConfirmButtonText:(NSString *)confirmButtonText{
-    [self.confirmButton setTitle:confirmButtonText forState:UIControlStateNormal];
-}
--(void)setCancelButtonText:(NSString *)cancelButtonText{
-    [self.cancelButton setTitle:cancelButtonText forState:UIControlStateNormal];
+-(void)animateSenior{
+
+    self.mainView.transform = CGAffineTransformMakeTranslation(0, 600);
+    [UIView animateWithDuration:1 delay:0 usingSpringWithDamping:0.35 initialSpringVelocity:0.5 options:UIViewAnimationOptionCurveLinear animations:^{
+        self.mainView.transform = CGAffineTransformMakeTranslation(0, 0);
+    } completion:^(BOOL finished) {
+    }];
 }
 
--(void)initWindow:(AlertStyle)style{
+#pragma mark -初始化UI
+-(void)initWindow:(YLAlertStyle)style{
     
     switch (style) {
-        case SimpleAlert:
+        case YLSimpleAlert:
             [self viewInitUI];
             [self simpleAlertViewInitUI];
             [self animateSenior];
             break;
-        case ConfirmAlert:
+        case YLConfirmAlert:
             [self viewInitUI];
             [self confirmAlertViewInitUI];
             [self animateSenior];
             break;
-        case CancelAndConfirmAlert:
+        case YLCancelAndConfirmAlert:
             [self viewInitUI];
             [self cancelAndConfirmAlertViewInitUI];
             [self animateSenior];
@@ -137,7 +144,7 @@
         make.center.equalTo(self.mainView.superview);
         make.width.offset([UIScreen mainScreen].bounds.size.width * 0.7);
     }];
-
+    
     [self.closedButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.mainView);
         make.right.equalTo(self.mainView);
@@ -211,49 +218,38 @@
     }];
 }
 
--(void)animate{
-    
-    [self setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0]];
-    [UIView animateWithDuration:1 animations:^{
-        [self setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.8]];
-    }];
-    
-    self.mainView.transform = CGAffineTransformMakeTranslation(0, 600);
-    [UIView animateWithDuration:1 animations:^{
-        self.mainView.transform = CGAffineTransformMakeTranslation(0, 0);
-    }];
-}
-
--(void)animateSenior{
-
-    self.mainView.transform = CGAffineTransformMakeTranslation(0, 600);
-    [UIView animateWithDuration:1 delay:0 usingSpringWithDamping:0.35 initialSpringVelocity:0.5 options:UIViewAnimationOptionCurveLinear animations:^{
-        self.mainView.transform = CGAffineTransformMakeTranslation(0, 0);
-    } completion:^(BOOL finished) {
-    }];
-}
-
+#pragma mark -事件处理
 -(void)exit{
     [self removeFromSuperview];
+}
+
+- (void)addConfirmButtonWithTitle:(NSString *)title confirmHandler:(void (^)())confirmHandler {
+    [self.confirmButton setTitle:title forState:UIControlStateNormal];
+    self.confirmButtonBlock = confirmHandler;
+}
+
+- (void)addCancelButtonWithTitle:(NSString *)title cancelHandler:(void (^)())cancelHandler
+{
+    [self.cancelButton setTitle:title forState:UIControlStateNormal];
+    self.cancelButtonBlock = cancelHandler;
 }
 
 -(void)closedButtonClick:(UIButton *)sender{
     [self exit];
 }
+
 -(void)confirmButtonClick:(UIButton*)sender{
-    
-    if(self.confirmButtonBlock){
-        self.confirmButtonBlock();
-    }
+
+    !self.confirmButtonBlock ? : self.confirmButtonBlock();
     [self exit];
 }
 -(void)cancelButtonClick:(UIButton*)sender{
-    if(self.cancelWindowBlock){
-        self.cancelWindowBlock();
-    }
+    
+    !self.cancelButtonBlock ? : self.cancelButtonBlock();
     [self exit];
 }
 
+#pragma mark -视图
 -(UIView*)mainView{
     if (_mainView == nil) {
         _mainView = [[UIView alloc]init];
