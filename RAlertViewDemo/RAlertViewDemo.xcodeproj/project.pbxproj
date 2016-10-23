@@ -256,7 +256,7 @@
 				TargetAttributes = {
 					E5AB181F1DBAEDDD0010FAA9 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = GWXM73N3ZY;
+						DevelopmentTeam = U5TBG834EA;
 						ProvisioningStyle = Automatic;
 					};
 					E5AB18381DBAEDDD0010FAA9 = {
@@ -527,7 +527,7 @@
 			baseConfigurationReference = CB03295CDD7123B8AC3FEBC6 /* Pods-RAlertViewDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = GWXM73N3ZY;
+				DEVELOPMENT_TEAM = U5TBG834EA;
 				INFOPLIST_FILE = RAlertViewDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -541,7 +541,7 @@
 			baseConfigurationReference = 7AF2B5D6B206A0EE93ADD018 /* Pods-RAlertViewDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = GWXM73N3ZY;
+				DEVELOPMENT_TEAM = U5TBG834EA;
 				INFOPLIST_FILE = RAlertViewDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
